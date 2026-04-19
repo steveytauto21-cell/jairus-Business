@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MZG Transport Services | Precision Logistics & Cargo Handling Philippines</title>
+  <meta name="description" content="MZG Transport Services — premier cargo handling and logistics solutions in Cainta, Rizal. 24/7 customer care, LTL/FTL, pick-up & delivery. You Call, We Haul." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" defer />
+  <style>
+    :root {
+      --trust-blue: #111111;
+      --yellow: #D4AF37;
+      --white: #FFFFFF;
+      --asphalt: #1A1A1A;
+    }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #0D0D0D; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+    .hero-bg {
+      background-image:
+        linear-gradient(to right, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.82) 60%, rgba(10,10,10,0.55) 100%),
+        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      width: 0; height: 2px;
+      background: #D4AF37;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .client-marquee {
+      display: flex;
+      gap: 3rem;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .clients-track:hover .client-marquee { animation-play-state: paused; }
+    .diagonal-cut {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+    .section-label {
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #D4AF37;
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.15);
+    }
+    .fab-messenger {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 999;
+      width: 58px; height: 58px;
+      background: #111111;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(10,10,10,0.55);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .fab-messenger:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(10,10,10,0.55);
+    }
+    .yellow-bar { background: #D4AF37; height: 4px; width: 48px; border-radius: 2px; }
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+    }
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+<body class="bg-[#0D0D0D]">
+
+  <!-- TOP BAR -->
+  <div class="bg-[#1A1A1A] text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-1">
+      <span class="flex items-center gap-2">
+        <i class="fas fa-phone-alt text-[#D4AF37]"></i>
+        24/7 Customer Care Hotline:
+        <a href="tel:+639284935229" class="font-semibold hover:text-[#D4AF37] transition-colors">+63 928 493 5229</a>
+      </span>
+      <span class="flex items-center gap-2">
+        <i class="fas fa-envelope text-[#D4AF37]"></i>
+        <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#D4AF37] transition-colors">mzgtransportservices@yahoo.com</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="bg-[#0D0D0D] sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-[#111111] rounded-lg flex items-center justify-center">
+          <i class="fas fa-truck text-[#D4AF37] text-lg"></i>
+        </div>
+        <div class="leading-tight">
+          <div class="font-black text-[#D4AF37] text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">MZG</div>
+          <div class="text-[10px] text-[#888888] font-semibold tracking-widest uppercase" style="font-family:'Inter',sans-serif;">Transport Services</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#cccccc]">
+        <li><a href="index.html" class="nav-link text-[#D4AF37]">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#b8952a] hover:shadow-lg transition-all duration-300">
+        Get a Quote <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden text-[#D4AF37] text-xl" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-[#181818] border-t border-[#2a2a2a] px-6 py-4">
+      <ul class="flex flex-col gap-4 text-sm font-semibold text-[#cccccc]">
+        <li><a href="index.html" class="block text-[#111111]">Home</a></li>
+        <li><a href="services.html" class="block">Services</a></li>
+        <li><a href="contact.html" class="block">Contact</a></li>
+        <li><a href="contact.html" class="inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold px-5 py-2.5 rounded-lg">Get a Quote <i class="fas fa-arrow-right"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg diagonal-cut pb-32 pt-24 md:pt-32 min-h-[90vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full">
+      <div class="max-w-3xl">
+        <p class="section-label mb-4">Philippines' Trusted Cargo & Hauling Partner</p>
+        <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-4">
+          Precision Logistics<br /><span class="text-[#D4AF37]">&amp; Cargo Handling.</span>
+        </h1>
+        <p class="text-white/80 text-xl md:text-2xl font-medium italic mb-8">"You Call, We Haul."</p>
+        <p class="text-white/70 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
+          On-time, accurate cargo delivery across the Philippines — backed by 24/7 customer support and a modern, well-maintained fleet.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="services.html" class="inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold px-7 py-4 rounded-lg text-base hover:bg-[#D4AF37]/80 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            View Services <i class="fas fa-caret-right"></i>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-7 py-4 rounded-lg text-base hover:bg-[#D4AF37] hover:text-[#111111] transition-all duration-300">
+            Get a Quote <i class="fas fa-file-invoice"></i>
+          </a>
+        </div>
+
+        <!-- Stats Strip -->
+        <div class="grid grid-cols-3 gap-4 mt-14 max-w-lg">
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-[#D4AF37] text-2xl font-black" style="font-family:'Montserrat',sans-serif;">24/7</div>
+            <div class="text-white/70 text-xs mt-1">Customer Care</div>
+          </div>
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-[#D4AF37] text-2xl font-black" style="font-family:'Montserrat',sans-serif;">4.8★</div>
+            <div class="text-white/70 text-xs mt-1">Google Rating</div>
+          </div>
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-[#D4AF37] text-2xl font-black" style="font-family:'Montserrat',sans-serif;">LTL+FTL</div>
+            <div class="text-white/70 text-xs mt-1">Full Coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED BY / CLIENTS -->
+  <section class="bg-[#0D0D0D] py-16 border-y border-[#2a2a2a]">
+    <div class="max-w-7xl mx-auto px-6 mb-10 text-center">
+      <p class="section-label mb-2">Our Valuable Clients</p>
+      <h2 class="text-[#EEEEEE] text-2xl md:text-3xl font-extrabold">Trusted By Industry Leaders</h2>
+      <div class="yellow-bar mx-auto mt-3"></div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="clients-track overflow-hidden">
+      <div class="client-marquee flex items-center">
+        <!-- Set 1 -->
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#FF6000] rounded-full flex items-center justify-center"><i class="fas fa-shopping-bag text-white text-xs"></i></div>
+          <span class="text-[#D4AF37] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Lazada</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#EE4D2D] rounded-full flex items-center justify-center"><i class="fas fa-store text-white text-xs"></i></div>
+          <span class="text-[#EE4D2D] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Shopee</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#0063A5] rounded-full flex items-center justify-center"><i class="fas fa-heartbeat text-white text-xs"></i></div>
+          <span class="text-[#0063A5] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Watsons</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#111111] rounded-full flex items-center justify-center"><i class="fas fa-shipping-fast text-[#D4AF37] text-xs"></i></div>
+          <span class="text-[#D4AF37] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">NinjaVan</span>
+        </div>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#FF6000] rounded-full flex items-center justify-center"><i class="fas fa-shopping-bag text-white text-xs"></i></div>
+          <span class="text-[#D4AF37] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Lazada</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#EE4D2D] rounded-full flex items-center justify-center"><i class="fas fa-store text-white text-xs"></i></div>
+          <span class="text-[#EE4D2D] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Shopee</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#0063A5] rounded-full flex items-center justify-center"><i class="fas fa-heartbeat text-white text-xs"></i></div>
+          <span class="text-[#0063A5] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">Watsons</span>
+        </div>
+        <div class="flex items-center gap-2 px-8 py-3 rounded-xl border border-[#2a2a2a] shadow-sm bg-[#1C1C1C] shrink-0">
+          <div class="w-8 h-8 bg-[#111111] rounded-full flex items-center justify-center"><i class="fas fa-shipping-fast text-[#D4AF37] text-xs"></i></div>
+          <span class="text-[#D4AF37] font-black text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">NinjaVan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-24 bg-[#0D0D0D]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Visual -->
+        <div class="relative">
+          <div class="bg-[#111111] rounded-2xl h-80 md:h-96 flex items-end p-8 overflow-hidden relative"
+               style="background-image: linear-gradient(to top left, rgba(10,10,10,0.97) 30%, rgba(212,175,55,0.08) 100%), url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&q=80'); background-size:cover; background-position:center;">
+            <div class="relative z-10">
+              <div class="text-[#D4AF37] text-5xl font-black mb-1" style="font-family:'Montserrat',sans-serif;">Est. 2019</div>
+              <div class="text-white/80 text-sm font-medium">Established &amp; Proudly Serving Since 2019</div>
+            </div>
+            <!-- Accent block -->
+            <div class="absolute top-6 right-6 bg-[#D4AF37] rounded-xl p-4"><i class="fas fa-route text-[#111111] text-2xl"></i>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -bottom-6 -right-4 bg-[#181818] rounded-2xl shadow-2xl p-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#111111] rounded-lg flex items-center justify-center">
+              <i class="fas fa-star text-[#D4AF37]"></i>
+            </div>
+            <div>
+              <div class="font-black text-[#D4AF37] text-sm" style="font-family:'Montserrat',sans-serif;">4.8 / 5.0</div>
+              <div class="text-[#999999] text-xs">Top Rated on Google</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Copy -->
+        <div>
+          <p class="section-label mb-3">Who We Are</p>
+          <h2 class="text-[#EEEEEE] text-3xl md:text-4xl font-extrabold leading-tight mb-5">
+            An Established Hauling &amp;<br />Logistics Management Provider
+          </h2>
+          <div class="yellow-bar mb-6"></div>
+          <p class="text-[#bbbbbb] text-base leading-relaxed mb-6">
+            MZG Transport Services is an established hauling and logistics management solutions provider. We are known for our on-time and accurate service through our 24/7 customer care hotline to trace and check loads — from point of origin to final destination.
+          </p>
+          <p class="text-[#bbbbbb] text-base leading-relaxed mb-8">
+            Our proactive, hands-on management approach ensures that every cargo consignment is handled with care, precision, and full accountability — giving our clients the peace of mind that their goods will arrive safely and on schedule.
+          </p>
+
+          <!-- Feature pills -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-3 bg-[#1C1C1C] rounded-xl p-3 shadow-sm border border-[#333333]">
+              <i class="fas fa-check-circle text-[#D4AF37] text-lg"></i>
+              <span class="text-sm font-semibold text-[#cccccc]">On-Time Delivery</span>
+            </div>
+            <div class="flex items-center gap-3 bg-[#1C1C1C] rounded-xl p-3 shadow-sm border border-[#333333]">
+              <i class="fas fa-headset text-[#D4AF37] text-lg"></i>
+              <span class="text-sm font-semibold text-[#cccccc]">24/7 Support</span>
+            </div>
+            <div class="flex items-center gap-3 bg-[#1C1C1C] rounded-xl p-3 shadow-sm border border-[#333333]">
+              <i class="fas fa-map-marked-alt text-[#D4AF37] text-lg"></i>
+              <span class="text-sm font-semibold text-[#cccccc]">Load Tracing</span>
+            </div>
+            <div class="flex items-center gap-3 bg-[#1C1C1C] rounded-xl p-3 shadow-sm border border-[#333333]">
+              <i class="fas fa-shield-alt text-[#D4AF37] text-lg"></i>
+              <span class="text-sm font-semibold text-[#cccccc]">Reliable &amp; Trusted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="bg-[#111111] py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="section-label mb-2">Our Foundation</p>
+        <h2 class="text-white text-3xl md:text-4xl font-extrabold">Mission &amp; Vision</h2>
+        <div class="yellow-bar mx-auto mt-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mission -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-[#D4AF37] rounded-xl flex items-center justify-center mb-6">
+            <i class="fas fa-bullseye text-[#D4AF37] text-2xl"></i>
+          </div>
+          <h3 class="text-white text-xl font-bold mb-4">Our Mission</h3>
+          <p class="text-white/70 leading-relaxed">
+            To provide reliable, on-time, and accurate hauling and logistics management services through proactive, hands-on oversight — ensuring every cargo reaches its destination safely, on schedule, and to the full satisfaction of our clients.
+          </p>
+        </div>
+        <!-- Vision -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 card-hover">
+          <div class="w-14 h-14 bg-[#D4AF37] rounded-xl flex items-center justify-center mb-6">
+            <i class="fas fa-eye text-[#D4AF37] text-2xl"></i>
+          </div>
+          <h3 class="text-white text-xl font-bold mb-4">Our Vision</h3>
+          <p class="text-white/70 leading-relaxed">
+            To be the most trusted logistics partner in the Philippines — recognized for our commitment to excellence, transparency, and consistent delivery performance that empowers businesses to grow without logistical constraints.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="bg-[#D4AF37] py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h2 class="text-[#EEEEEE] text-2xl md:text-3xl font-extrabold">Ready to ship your cargo?</h2>
+        <p class="text-[#111111]/70 mt-1">Contact us now and get a free logistics assessment.</p>
+      </div>
+      <div class="flex gap-4 flex-wrap">
+        <a href="tel:+639284935229" class="inline-flex items-center gap-2 bg-[#111111] text-white font-bold px-6 py-3.5 rounded-lg hover:bg-[#1A1A1A] transition-all duration-300 hover:scale-105">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-[#111111] text-[#111111] font-bold px-6 py-3.5 rounded-lg hover:bg-[#111111] hover:text-white transition-all duration-300">
+          Get a Quote <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1A1A1A] text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-[#111111] rounded-lg flex items-center justify-center">
+              <i class="fas fa-truck text-[#D4AF37] text-lg"></i>
+            </div>
+            <div>
+              <div class="font-black text-white text-xl" style="font-family:'Montserrat',sans-serif;">MZG</div>
+              <div class="text-[10px] text-white/60 font-semibold tracking-widest uppercase">Transport Services</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">Precision logistics and cargo handling solutions across the Philippines. You Call, We Haul.</p>
+          <div class="inline-flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 text-sm font-semibold text-[#D4AF37]">
+            <i class="fas fa-star"></i> 4.8 ⭐ Top Rated on Google
+          </div>
+        </div>
+        <!-- Links -->
+        <div>
+          <h4 class="text-white font-bold mb-5 text-sm tracking-widest uppercase">Navigation</h4>
+          <ul class="space-y-3 text-sm text-white/60">
+            <li><a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
+            <li><a href="services.html" class="hover:text-[#D4AF37] transition-colors">Services &amp; Fleet</a></li>
+            <li><a href="contact.html" class="hover:text-[#D4AF37] transition-colors">Contact &amp; Inquiries</a></li>
+            <li><a href="https://www.facebook.com/mzgtransportservices" target="_blank" rel="noopener" class="hover:text-[#D4AF37] transition-colors"><i class="fab fa-facebook mr-1"></i> Facebook Page</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-bold mb-5 text-sm tracking-widest uppercase">Contact</h4>
+          <ul class="space-y-3 text-sm text-white/60">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-map-marker-alt text-[#D4AF37] mt-0.5 shrink-0"></i>
+              <span>H4PQ+GGQ, Twinpeak Dr,<br />Cainta, 1920 Rizal</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone-alt text-[#D4AF37] shrink-0"></i>
+              <a href="tel:+639284935229" class="hover:text-[#D4AF37] transition-colors">+63 928 493 5229</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-[#D4AF37] shrink-0"></i>
+              <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#D4AF37] transition-colors break-all">mzgtransportservices@yahoo.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-white/40 text-xs">
+        <span>&copy; 2025 MZG Transport Services. All rights reserved.</span>
+        <span>Cainta, Rizal, Philippines</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAB MESSENGER -->
+  <a href="https://m.me/mzgtransportservices" target="_blank" rel="noopener" class="fab-messenger" aria-label="Message us on Messenger">
+    <i class="fab fa-facebook-messenger text-white text-2xl"></i>
+  </a>
+
+  <script defer>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = hamburger.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle("fa-times");
+    });
+  </script>
+</body>
+</html>
