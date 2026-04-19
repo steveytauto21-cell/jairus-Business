@@ -11,11 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" defer />
   <style>
-    body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f8f9fb; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #0D0D0D; }
     h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
     .page-hero-bg {
       background-image:
-        linear-gradient(135deg, rgba(11,57,84,0.97) 0%, rgba(43,45,66,0.88) 100%),
+        linear-gradient(135deg, rgba(10,10,10,0.97) 0%, rgba(43,45,66,0.88) 100%),
         url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1800&q=80');
       background-size: cover;
       background-position: center;
@@ -26,7 +26,7 @@
       position: absolute;
       left: 0; bottom: -3px;
       width: 0; height: 2px;
-      background: #FFD166;
+      background: #D4AF37;
       transition: width 0.3s ease;
     }
     .nav-link:hover::after { width: 100%; }
@@ -35,31 +35,31 @@
       font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
-      color: #FFD166;
+      color: #D4AF37;
     }
-    .yellow-bar { background: #FFD166; height: 4px; width: 48px; border-radius: 2px; }
+    .yellow-bar { background: #D4AF37; height: 4px; width: 48px; border-radius: 2px; }
     .contact-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .contact-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(11,57,84,0.14);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.15);
     }
     .input-field {
       width: 100%;
       padding: 0.85rem 1rem;
-      border: 1.5px solid #e2e8f0;
+      border: 1.5px solid #2a2a2a;
       border-radius: 0.75rem;
       font-size: 0.9rem;
       font-family: 'Inter', sans-serif;
-      color: #2B2D42;
-      background: #fff;
+      color: #EEEEEE;
+      background: #181818;
       outline: none;
       transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .input-field:focus {
-      border-color: #0B3954;
-      box-shadow: 0 0 0 3px rgba(11,57,84,0.1);
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
     }
     .input-field::placeholder { color: #94a3b8; }
     .submit-btn {
@@ -67,7 +67,7 @@
     }
     .submit-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(11,57,84,0.35);
+      box-shadow: 0 8px 24px rgba(10,10,10,0.45);
     }
     .submit-btn:active {
       transform: scale(0.98);
@@ -78,13 +78,13 @@
       right: 1.75rem;
       z-index: 999;
       width: 58px; height: 58px;
-      background: #0B3954;
+      background: #111111;
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(11,57,84,0.45);
+      box-shadow: 0 6px 24px rgba(10,10,10,0.55);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .fab-messenger:hover { transform: scale(1.1); box-shadow: 0 10px 30px rgba(11,57,84,0.55); }
+    .fab-messenger:hover { transform: scale(1.1); box-shadow: 0 10px 30px rgba(10,10,10,0.55); }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
     #toast {
@@ -92,7 +92,7 @@
       bottom: 5.5rem;
       right: 1.75rem;
       z-index: 9999;
-      background: #0B3954;
+      background: #111111;
       color: white;
       padding: 0.85rem 1.25rem;
       border-radius: 0.75rem;
@@ -101,7 +101,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      box-shadow: 0 8px 24px rgba(11,57,84,0.35);
+      box-shadow: 0 8px 24px rgba(10,10,10,0.45);
       opacity: 0;
       transform: translateY(10px);
       pointer-events: none;
@@ -110,53 +110,53 @@
     #toast.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
-<body class="bg-[#f8f9fb]">
+<body class="bg-[#0D0D0D]">
 
   <!-- TOP BAR -->
-  <div class="bg-[#2B2D42] text-white text-xs py-2 px-4">
+  <div class="bg-[#1A1A1A] text-white text-xs py-2 px-4">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-1">
       <span class="flex items-center gap-2">
-        <i class="fas fa-phone-alt text-[#FFD166]"></i>
+        <i class="fas fa-phone-alt text-[#D4AF37]"></i>
         24/7 Customer Care Hotline:
-        <a href="tel:+639284935229" class="font-semibold hover:text-[#FFD166] transition-colors">+63 928 493 5229</a>
+        <a href="tel:+639284935229" class="font-semibold hover:text-[#D4AF37] transition-colors">+63 928 493 5229</a>
       </span>
       <span class="flex items-center gap-2">
-        <i class="fas fa-envelope text-[#FFD166]"></i>
-        <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#FFD166] transition-colors">mzgtransportservices@yahoo.com</a>
+        <i class="fas fa-envelope text-[#D4AF37]"></i>
+        <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#D4AF37] transition-colors">mzgtransportservices@yahoo.com</a>
       </span>
     </div>
   </div>
 
   <!-- NAVBAR -->
-  <nav class="bg-white sticky top-0 z-50 shadow-md">
+  <nav class="bg-[#0D0D0D] sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-[#0B3954] rounded-lg flex items-center justify-center">
-          <i class="fas fa-truck text-[#FFD166] text-lg"></i>
+        <div class="w-10 h-10 bg-[#111111] rounded-lg flex items-center justify-center">
+          <i class="fas fa-truck text-[#D4AF37] text-lg"></i>
         </div>
         <div class="leading-tight">
-          <div class="font-black text-[#0B3954] text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">MZG</div>
-          <div class="text-[10px] text-[#2B2D42] font-semibold tracking-widest uppercase">Transport Services</div>
+          <div class="font-black text-[#D4AF37] text-xl tracking-tight" style="font-family:'Montserrat',sans-serif;">MZG</div>
+          <div class="text-[10px] text-[#1A1A1A] font-semibold tracking-widest uppercase">Transport Services</div>
         </div>
       </a>
-      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#2B2D42]">
+      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#cccccc]">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="contact.html" class="nav-link text-[#0B3954]">Contact</a></li>
+        <li><a href="contact.html" class="nav-link text-[#D4AF37]">Contact</a></li>
       </ul>
-      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-[#FFD166] text-[#0B3954] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#f5c842] hover:shadow-lg transition-all duration-300">
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#b8952a] hover:shadow-lg transition-all duration-300">
         Get a Quote <i class="fas fa-arrow-right"></i>
       </a>
-      <button id="hamburger" class="md:hidden text-[#0B3954] text-xl" aria-label="Toggle menu">
+      <button id="hamburger" class="md:hidden text-[#D4AF37] text-xl" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden bg-white border-t border-slate-100 px-6 py-4">
-      <ul class="flex flex-col gap-4 text-sm font-semibold text-[#2B2D42]">
+    <div id="mobile-menu" class="md:hidden bg-[#181818] border-t border-[#2a2a2a] px-6 py-4">
+      <ul class="flex flex-col gap-4 text-sm font-semibold text-[#cccccc]">
         <li><a href="index.html" class="block">Home</a></li>
         <li><a href="services.html" class="block">Services</a></li>
-        <li><a href="contact.html" class="block text-[#0B3954]">Contact</a></li>
-        <li><a href="contact.html" class="inline-flex items-center gap-2 bg-[#FFD166] text-[#0B3954] font-bold px-5 py-2.5 rounded-lg">Get a Quote <i class="fas fa-arrow-right"></i></a></li>
+        <li><a href="contact.html" class="block text-[#111111]">Contact</a></li>
+        <li><a href="contact.html" class="inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold px-5 py-2.5 rounded-lg">Get a Quote <i class="fas fa-arrow-right"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -166,7 +166,7 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="section-label mb-3">Reach Us Anytime</p>
       <h1 class="text-white text-4xl md:text-6xl font-black leading-tight mb-4">
-        Contact &amp; <span class="text-[#FFD166]">Inquiries</span>
+        Contact &amp; <span class="text-[#D4AF37]">Inquiries</span>
       </h1>
       <p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
         Our dispatch and customer care team is on standby 24/7. Fill out the inquiry form below or reach us directly through your preferred channel.
@@ -175,43 +175,43 @@
   </section>
 
   <!-- DIRECT CONTACT CARDS -->
-  <section class="py-16 bg-[#f8f9fb]">
+  <section class="py-16 bg-[#0D0D0D]">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="section-label mb-2">Direct Channels</p>
-        <h2 class="text-[#0B3954] text-2xl md:text-3xl font-extrabold">Reach Us Directly</h2>
+        <h2 class="text-[#EEEEEE] text-2xl md:text-3xl font-extrabold">Reach Us Directly</h2>
         <div class="yellow-bar mx-auto mt-3"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Phone -->
-        <a href="tel:+639284935229" class="contact-card bg-white rounded-2xl p-8 border border-slate-100 shadow-sm flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-[#0B3954] rounded-2xl flex items-center justify-center mb-5">
-            <i class="fas fa-phone-alt text-[#FFD166] text-2xl"></i>
+        <a href="tel:+639284935229" class="contact-card bg-[#1C1C1C] rounded-2xl p-8 border border-[#2a2a2a] shadow-sm flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-[#D4AF37] rounded-2xl flex items-center justify-center mb-5">
+            <i class="fas fa-phone-alt text-[#111111] text-2xl"></i>
           </div>
-          <h3 class="text-[#0B3954] font-bold text-base mb-1">Call / Text</h3>
-          <p class="text-slate-500 text-xs mb-3">Available 24 hours, 7 days a week</p>
-          <span class="text-[#0B3954] font-black text-lg" style="font-family:'Montserrat',sans-serif;">+63 928 493 5229</span>
+          <h3 class="text-[#EEEEEE] font-bold text-base mb-1">Call / Text</h3>
+          <p class="text-[#999999] text-xs mb-3">Available 24 hours, 7 days a week</p>
+          <span class="text-[#D4AF37] font-black text-lg" style="font-family:'Montserrat',sans-serif;">+63 928 493 5229</span>
         </a>
 
         <!-- Email -->
-        <a href="mailto:mzgtransportservices@yahoo.com" class="contact-card bg-white rounded-2xl p-8 border border-slate-100 shadow-sm flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-[#0B3954] rounded-2xl flex items-center justify-center mb-5">
-            <i class="fas fa-envelope text-[#FFD166] text-2xl"></i>
+        <a href="mailto:mzgtransportservices@yahoo.com" class="contact-card bg-[#1C1C1C] rounded-2xl p-8 border border-[#2a2a2a] shadow-sm flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-[#D4AF37] rounded-2xl flex items-center justify-center mb-5">
+            <i class="fas fa-envelope text-[#111111] text-2xl"></i>
           </div>
-          <h3 class="text-[#0B3954] font-bold text-base mb-1">Email Us</h3>
-          <p class="text-slate-500 text-xs mb-3">Formal inquiries &amp; documentation</p>
-          <span class="text-[#0B3954] font-semibold text-sm break-all">mzgtransportservices@yahoo.com</span>
+          <h3 class="text-[#EEEEEE] font-bold text-base mb-1">Email Us</h3>
+          <p class="text-[#999999] text-xs mb-3">Formal inquiries &amp; documentation</p>
+          <span class="text-[#EEEEEE] font-semibold text-sm break-all">mzgtransportservices@yahoo.com</span>
         </a>
 
         <!-- Messenger -->
-        <a href="https://m.me/mzgtransportservices" target="_blank" rel="noopener" class="contact-card bg-[#0B3954] rounded-2xl p-8 shadow-md flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-[#FFD166] rounded-2xl flex items-center justify-center mb-5">
-            <i class="fab fa-facebook-messenger text-[#0B3954] text-2xl"></i>
+        <a href="https://m.me/mzgtransportservices" target="_blank" rel="noopener" class="contact-card bg-[#111111] rounded-2xl p-8 shadow-md flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-[#D4AF37] rounded-2xl flex items-center justify-center mb-5">
+            <i class="fab fa-facebook-messenger text-[#111111] text-2xl"></i>
           </div>
           <h3 class="text-white font-bold text-base mb-1">Facebook Messenger</h3>
           <p class="text-white/60 text-xs mb-3">Fast, convenient real-time chat</p>
-          <span class="inline-flex items-center gap-2 bg-[#FFD166] text-[#0B3954] font-bold text-sm px-4 py-2 rounded-lg">
+          <span class="inline-flex items-center gap-2 bg-[#D4AF37] text-[#111111] font-bold text-sm px-4 py-2 rounded-lg">
             Message Us <i class="fas fa-arrow-right"></i>
           </span>
         </a>
@@ -220,16 +220,16 @@
   </section>
 
   <!-- INQUIRY FORM + MAP -->
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-[#0D0D0D]">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
         <!-- FORM -->
         <div>
           <p class="section-label mb-2">Submit an Inquiry</p>
-          <h2 class="text-[#0B3954] text-2xl md:text-3xl font-extrabold mb-2">Request a Logistics Quote</h2>
+          <h2 class="text-[#EEEEEE] text-2xl md:text-3xl font-extrabold mb-2">Request a Logistics Quote</h2>
           <div class="yellow-bar mb-6"></div>
-          <p class="text-slate-500 text-sm mb-8 leading-relaxed">
+          <p class="text-[#999999] text-sm mb-8 leading-relaxed">
             Fill out the form below and our operations team will review your cargo requirements and respond within the day. All fields are required.
           </p>
 
@@ -237,11 +237,11 @@
             <!-- Row 1 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Company Name <span class="text-red-500">*</span></label>
+                <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Company Name <span class="text-red-500">*</span></label>
                 <input type="text" id="company" class="input-field" placeholder="e.g. ABC Corporation" required />
               </div>
               <div>
-                <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Contact Person <span class="text-red-500">*</span></label>
+                <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Contact Person <span class="text-red-500">*</span></label>
                 <input type="text" id="contact_person" class="input-field" placeholder="Full name" required />
               </div>
             </div>
@@ -249,18 +249,18 @@
             <!-- Row 2 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Phone Number <span class="text-red-500">*</span></label>
+                <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Phone Number <span class="text-red-500">*</span></label>
                 <input type="tel" id="phone" class="input-field" placeholder="+63 9XX XXX XXXX" required />
               </div>
               <div>
-                <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Email Address <span class="text-red-500">*</span></label>
+                <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Email Address <span class="text-red-500">*</span></label>
                 <input type="email" id="email" class="input-field" placeholder="your@email.com" required />
               </div>
             </div>
 
             <!-- Cargo Type -->
             <div>
-              <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Cargo Type / Service <span class="text-red-500">*</span></label>
+              <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Cargo Type / Service <span class="text-red-500">*</span></label>
               <select id="cargo_type" class="input-field" required>
                 <option value="" disabled selected>Select a service type...</option>
                 <option value="LTL - Less than Truckload">LTL — Less than Truckload</option>
@@ -271,56 +271,56 @@
 
             <!-- Delivery Details -->
             <div>
-              <label class="block text-xs font-bold text-[#0B3954] mb-1.5 uppercase tracking-wider">Delivery Details <span class="text-red-500">*</span></label>
+              <label class="block text-xs font-bold text-[#D4AF37] mb-1.5 uppercase tracking-wider">Delivery Details <span class="text-red-500">*</span></label>
               <textarea id="delivery_details" rows="5" class="input-field resize-none" placeholder="Describe your cargo, pick-up location, delivery destination, preferred schedule, and any special handling requirements..." required></textarea>
             </div>
 
             <!-- Submit Button -->
             <button
               onclick="dispatchInquiry()"
-              class="submit-btn w-full bg-[#0866FF] text-white font-bold text-base py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-[#0B3954]"
+              class="submit-btn w-full bg-[#D4AF37] text-[#111111] font-bold text-base py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-[#111111]"
               aria-label="Send logistics inquiry via Facebook Messenger"
             >
               <i class="fab fa-facebook-messenger text-lg"></i>
               Send via Messenger
             </button>
-            <p class="text-slate-400 text-xs text-center mt-2">This will open Facebook Messenger with your inquiry pre-drafted and ready to send to our page.</p>
+            <p class="text-[#888888] text-xs text-center mt-2">This will open Facebook Messenger with your inquiry pre-drafted and ready to send to our page.</p>
           </div>
         </div>
 
         <!-- MAP + INFO -->
         <div class="flex flex-col gap-8">
           <!-- Info Block -->
-          <div class="bg-[#0B3954] rounded-2xl p-8 text-white">
+          <div class="bg-[#111111] rounded-2xl p-8 text-white">
             <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
-              <i class="fas fa-location-arrow text-[#FFD166]"></i> Our Office Location
+              <i class="fas fa-location-arrow text-[#D4AF37]"></i> Our Office Location
             </h3>
             <ul class="space-y-4 text-sm">
               <li class="flex items-start gap-3 text-white/80">
-                <i class="fas fa-map-marker-alt text-[#FFD166] mt-0.5 shrink-0"></i>
+                <i class="fas fa-map-marker-alt text-[#D4AF37] mt-0.5 shrink-0"></i>
                 <span>H4PQ+GGQ, Twinpeak Dr, Cainta, 1920 Rizal, Philippines</span>
               </li>
               <li class="flex items-center gap-3 text-white/80">
-                <i class="fas fa-clock text-[#FFD166] shrink-0"></i>
+                <i class="fas fa-clock text-[#D4AF37] shrink-0"></i>
                 <span>Office Hours: Open 24/7 for Customer Care</span>
               </li>
               <li class="flex items-center gap-3 text-white/80">
-                <i class="fas fa-phone-alt text-[#FFD166] shrink-0"></i>
-                <a href="tel:+639284935229" class="hover:text-[#FFD166] transition-colors">+63 928 493 5229</a>
+                <i class="fas fa-phone-alt text-[#D4AF37] shrink-0"></i>
+                <a href="tel:+639284935229" class="hover:text-[#D4AF37] transition-colors">+63 928 493 5229</a>
               </li>
               <li class="flex items-center gap-3 text-white/80">
-                <i class="fab fa-facebook text-[#FFD166] shrink-0"></i>
-                <a href="https://www.facebook.com/mzgtransportservices" target="_blank" rel="noopener" class="hover:text-[#FFD166] transition-colors">facebook.com/mzgtransportservices</a>
+                <i class="fab fa-facebook text-[#D4AF37] shrink-0"></i>
+                <a href="https://www.facebook.com/mzgtransportservices" target="_blank" rel="noopener" class="hover:text-[#D4AF37] transition-colors">facebook.com/mzgtransportservices</a>
               </li>
             </ul>
           </div>
 
           <!-- Map Embed -->
           <div>
-            <h3 class="text-[#0B3954] font-bold text-base mb-3 flex items-center gap-2">
-              <i class="fas fa-map text-[#FFD166]"></i> Find Us on the Map
+            <h3 class="text-[#111111] font-bold text-base mb-3 flex items-center gap-2">
+              <i class="fas fa-map text-[#D4AF37]"></i> Find Us on the Map
             </h3>
-            <div class="w-full h-72 md:h-80 rounded-2xl shadow-inner border border-slate-200 overflow-hidden">
+            <div class="w-full h-72 md:h-80 rounded-2xl shadow-inner border border-[#2a2a2a] overflow-hidden">
               <iframe
                 title="MZG Transport Services Location — Twinpeak Dr, Cainta, Rizal"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.019!2d121.12!3d14.568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7b5e5555555%3A0x0!2sTwinpeak+Dr%2C+Cainta%2C+Rizal!5e0!3m2!1sen!2sph!4v1!5m2!1sen!2sph"
@@ -333,7 +333,7 @@
                 class="w-full h-full max-w-full"
               ></iframe>
             </div>
-            <p class="text-slate-400 text-xs mt-2 flex items-center gap-1">
+            <p class="text-[#888888] text-xs mt-2 flex items-center gap-1">
               <i class="fas fa-info-circle"></i>
               Twinpeak Drive, Cainta, 1920 Rizal, Philippines
             </p>
@@ -344,13 +344,13 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#2B2D42] text-white pt-16 pb-8">
+  <footer class="bg-[#1A1A1A] text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-[#0B3954] rounded-lg flex items-center justify-center">
-              <i class="fas fa-truck text-[#FFD166] text-lg"></i>
+            <div class="w-10 h-10 bg-[#111111] rounded-lg flex items-center justify-center">
+              <i class="fas fa-truck text-[#D4AF37] text-lg"></i>
             </div>
             <div>
               <div class="font-black text-white text-xl" style="font-family:'Montserrat',sans-serif;">MZG</div>
@@ -358,33 +358,33 @@
             </div>
           </div>
           <p class="text-white/60 text-sm leading-relaxed mb-4">Precision logistics and cargo handling solutions across the Philippines. You Call, We Haul.</p>
-          <div class="inline-flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 text-sm font-semibold text-[#FFD166]">
+          <div class="inline-flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 text-sm font-semibold text-[#D4AF37]">
             <i class="fas fa-star"></i> 4.8 ⭐ Top Rated on Google
           </div>
         </div>
         <div>
           <h4 class="text-white font-bold mb-5 text-sm tracking-widest uppercase">Navigation</h4>
           <ul class="space-y-3 text-sm text-white/60">
-            <li><a href="index.html" class="hover:text-[#FFD166] transition-colors">Home</a></li>
-            <li><a href="services.html" class="hover:text-[#FFD166] transition-colors">Services &amp; Fleet</a></li>
-            <li><a href="contact.html" class="hover:text-[#FFD166] transition-colors">Contact &amp; Inquiries</a></li>
-            <li><a href="https://www.facebook.com/mzgtransportservices" target="_blank" rel="noopener" class="hover:text-[#FFD166] transition-colors"><i class="fab fa-facebook mr-1"></i> Facebook Page</a></li>
+            <li><a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
+            <li><a href="services.html" class="hover:text-[#D4AF37] transition-colors">Services &amp; Fleet</a></li>
+            <li><a href="contact.html" class="hover:text-[#D4AF37] transition-colors">Contact &amp; Inquiries</a></li>
+            <li><a href="https://www.facebook.com/mzgtransportservices" target="_blank" rel="noopener" class="hover:text-[#D4AF37] transition-colors"><i class="fab fa-facebook mr-1"></i> Facebook Page</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-bold mb-5 text-sm tracking-widest uppercase">Contact</h4>
           <ul class="space-y-3 text-sm text-white/60">
             <li class="flex items-start gap-2">
-              <i class="fas fa-map-marker-alt text-[#FFD166] mt-0.5 shrink-0"></i>
+              <i class="fas fa-map-marker-alt text-[#D4AF37] mt-0.5 shrink-0"></i>
               <span>H4PQ+GGQ, Twinpeak Dr,<br />Cainta, 1920 Rizal</span>
             </li>
             <li class="flex items-center gap-2">
-              <i class="fas fa-phone-alt text-[#FFD166] shrink-0"></i>
-              <a href="tel:+639284935229" class="hover:text-[#FFD166] transition-colors">+63 928 493 5229</a>
+              <i class="fas fa-phone-alt text-[#D4AF37] shrink-0"></i>
+              <a href="tel:+639284935229" class="hover:text-[#D4AF37] transition-colors">+63 928 493 5229</a>
             </li>
             <li class="flex items-center gap-2">
-              <i class="fas fa-envelope text-[#FFD166] shrink-0"></i>
-              <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#FFD166] transition-colors break-all">mzgtransportservices@yahoo.com</a>
+              <i class="fas fa-envelope text-[#D4AF37] shrink-0"></i>
+              <a href="mailto:mzgtransportservices@yahoo.com" class="hover:text-[#D4AF37] transition-colors break-all">mzgtransportservices@yahoo.com</a>
             </li>
           </ul>
         </div>
@@ -403,7 +403,7 @@
 
   <!-- TOAST NOTIFICATION -->
   <div id="toast">
-    <i class="fas fa-check-circle text-[#FFD166]"></i>
+    <i class="fas fa-check-circle text-[#D4AF37]"></i>
     Message drafted — opening Facebook Messenger...
   </div>
 
@@ -415,7 +415,7 @@
       mobileMenu.classList.toggle('open');
       const icon = hamburger.querySelector('i');
       icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
+      icon.classList.toggle("fa-times");
     });
 
     // ─── MESSENGER DISPATCH PROTOCOL ───────────────────────────────
