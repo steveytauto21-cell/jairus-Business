@@ -278,13 +278,13 @@
             <!-- Submit Button -->
             <button
               onclick="dispatchInquiry()"
-              class="submit-btn w-full bg-[#0B3954] text-white font-bold text-base py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-[#2B2D42]"
-              aria-label="Submit logistics inquiry via email"
+              class="submit-btn w-full bg-[#0866FF] text-white font-bold text-base py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-[#0B3954]"
+              aria-label="Send logistics inquiry via Facebook Messenger"
             >
-              <i class="fas fa-paper-plane"></i>
-              Dispatch Inquiry
+              <i class="fab fa-facebook-messenger text-lg"></i>
+              Send via Messenger
             </button>
-            <p class="text-slate-400 text-xs text-center mt-2">This will open your email client with a pre-filled inquiry message addressed to our operations team.</p>
+            <p class="text-slate-400 text-xs text-center mt-2">This will open Facebook Messenger with your inquiry pre-drafted and ready to send to our page.</p>
           </div>
         </div>
 
@@ -404,7 +404,7 @@
   <!-- TOAST NOTIFICATION -->
   <div id="toast">
     <i class="fas fa-check-circle text-[#FFD166]"></i>
-    Inquiry dispatched — opening your email client...
+    Message drafted — opening Facebook Messenger...
   </div>
 
   <script defer>
@@ -418,53 +418,42 @@
       icon.classList.toggle('fa-times');
     });
 
-    // ─── DISPATCH PROTOCOL ─────────────────────────────────────────
+    // ─── MESSENGER DISPATCH PROTOCOL ───────────────────────────────
     function dispatchInquiry() {
-      const company        = document.getElementById('company').value.trim();
-      const contactPerson  = document.getElementById('contact_person').value.trim();
-      const phone          = document.getElementById('phone').value.trim();
-      const email          = document.getElementById('email').value.trim();
-      const cargoType      = document.getElementById('cargo_type').value;
-      const deliveryDetails= document.getElementById('delivery_details').value.trim();
+      const company         = document.getElementById('company').value.trim();
+      const contactPerson   = document.getElementById('contact_person').value.trim();
+      const phone           = document.getElementById('phone').value.trim();
+      const email           = document.getElementById('email').value.trim();
+      const cargoType       = document.getElementById('cargo_type').value;
+      const deliveryDetails = document.getElementById('delivery_details').value.trim();
 
       // Validate all fields
       if (!company || !contactPerson || !phone || !email || !cargoType || !deliveryDetails) {
-        alert('Please complete all required fields before submitting your inquiry.');
+        alert('Please complete all required fields before sending your inquiry.');
         return;
       }
 
-      // Build professional email body
-      const subject = encodeURIComponent('Logistics Inquiry - ' + company);
+      // Build the pre-drafted Messenger message
+      const message =
+        '📦 MZG TRANSPORT SERVICES — LOGISTICS INQUIRY\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+        '🏢 Company Name     : ' + company + '\n' +
+        '👤 Contact Person   : ' + contactPerson + '\n' +
+        '📞 Phone Number     : ' + phone + '\n' +
+        '📧 Email Address    : ' + email + '\n\n' +
+        '🚚 Service Type     : ' + cargoType + '\n\n' +
+        '📋 Delivery Details :\n' + deliveryDetails + '\n\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        'Sent via mzgtransportservices.com';
 
-      const body = encodeURIComponent(
-        '====================================================\n' +
-        '      MZG TRANSPORT SERVICES — LOGISTICS INQUIRY\n' +
-        '====================================================\n\n' +
-        'COMPANY INFORMATION\n' +
-        '--------------------\n' +
-        'Company Name     : ' + company + '\n' +
-        'Contact Person   : ' + contactPerson + '\n' +
-        'Phone Number     : ' + phone + '\n' +
-        'Email Address    : ' + email + '\n\n' +
-        'SHIPMENT DETAILS\n' +
-        '--------------------\n' +
-        'Service Type     : ' + cargoType + '\n\n' +
-        'Delivery Details :\n' + deliveryDetails + '\n\n' +
-        '====================================================\n' +
-        'This inquiry was submitted via the MZG Transport Services website.\n' +
-        'Please reply to this email or contact the sender directly.\n' +
-        '===================================================='
-      );
-
-      const mailtoURL = 'mailto:mzgtransportservices@yahoo.com?subject=' + subject + '&body=' + body;
-
-      // Open the email client
-      window.location.href = mailtoURL;
+      // Open Facebook Messenger with pre-filled message
+      const messengerURL = 'https://www.facebook.com/messages/t/mzgtransportservices?text=' + encodeURIComponent(message);
+      window.open(messengerURL, '_blank');
 
       // Show toast confirmation
       const toast = document.getElementById('toast');
       toast.classList.add('show');
-      setTimeout(() => { toast.classList.remove('show'); }, 4000);
+      setTimeout(() => { toast.classList.remove('show'); }, 4500);
     }
   </script>
 </body>
